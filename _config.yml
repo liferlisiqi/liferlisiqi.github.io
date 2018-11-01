@@ -10,10 +10,9 @@ baseurl: ""      # for example, '/blog' if your blog hosted on 'host/blog'
 github_repo: "https://github.com/liferlisiqi/liferlisiqi.github.io.git" # you code repository
 
 # Sidebar settings
-sidebar: false                           # whether or not using Sidebar.
-sidebar-about-description: "Goals determine what you going to be!"
-sidebar-avatar: /img/IMG_20130805_100909.jpg     # use absolute URL, seeing it's used in both `/` and `/about/`
-
+#sidebar:                           
+#sidebar-about-description: "Goals determine what you going to be!"
+#sidebar-avatar: /img/IMG_20130805_100909.jpg     # use absolute URL, seeing it's used in both `/` and `/about/`
 
 # SNS settings
 RSS: false
@@ -52,4 +51,3 @@ featured-condition-size: 1              # 相同标签数量大于这个数，�
 # Progressive Web Apps
 chrome-tab-theme-color: "#000000"
 service-worker: true
-
