@@ -11,6 +11,7 @@ github_repo: "https://github.com/liferlisiqi/liferlisiqi.github.io.git" # you co
 
 # Sidebar settings
 sidebar: true
+sidebar-about-description: "努力有趣，努力热爱生活"
 sidebar-avatar: /img/IMG_20130805_100909.jpg     # use absolute URL, seeing it's used in both `/` and `/about/`
 
 # SNS settings
