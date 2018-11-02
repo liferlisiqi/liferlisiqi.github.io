@@ -10,7 +10,7 @@ tags:
     - leetcode
 ---
 
-'''c
+```c++
 /**
  * Definition for singly-linked list.
  * struct ListNode {
@@ -40,4 +40,4 @@ public:
         return res->next;
     }
 };
-'''
+```
