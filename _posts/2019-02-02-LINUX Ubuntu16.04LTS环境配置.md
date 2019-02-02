@@ -46,12 +46,17 @@ sudo apt-get install -f
 ### 1.4 显卡驱动
 使用Ubuntu到目前为止，发现需要人工安装的驱动只有显卡驱动。安装显卡驱动有两个方法：系统适配显卡驱动和通过命令行安装，其中第一个方法十分的简单粗暴。下面两篇教程可以作为参考。
 
-[Ubuntu16.04安装NVIDIA（GeForce1080Ti）显卡驱动](https://blog.csdn.net/QLULIBIN/article/details/79947062)
-[ubuntu16.04下NVIDIA GTX965M显卡驱动PPA安装](https://blog.csdn.net/10km/article/details/61191230)
+[Ubuntu16.04安装NVIDIA（GeForce1080Ti）显卡驱动](https://blog.csdn.net/QLULIBIN/article/details/79947062)  
+[ubuntu16.04下NVIDIA GTX965M显卡驱动PPA安装](https://blog.csdn.net/10km/article/details/61191230)  
 
+### 1.5 中文输入法 ibus-pinyin
+作为一个，恩，是需要装一个中文输入法的,直接参考下面这篇教程就好。
 
-
+[Ubuntu 16.04安装iBus中文输入法pinyin及问题](https://blog.csdn.net/suifenghahahaha/article/details/78723733)
 
 ## reference
 
-[大宝日记/ubuntu使用shadowsocks](https://www.sundabao.com/ubuntu%E4%BD%BF%E7%94%A8shadowsocks/)
+[大宝日记/ubuntu使用shadowsocks](https://www.sundabao.com/ubuntu%E4%BD%BF%E7%94%A8shadowsocks/)  
+[Ubuntu16.04安装NVIDIA（GeForce1080Ti）显卡驱动](https://blog.csdn.net/QLULIBIN/article/details/79947062)  
+[ubuntu16.04下NVIDIA GTX965M显卡驱动PPA安装](https://blog.csdn.net/10km/article/details/61191230)  
+[Ubuntu 16.04安装iBus中文输入法pinyin及问题](https://blog.csdn.net/suifenghahahaha/article/details/78723733)  
