@@ -54,6 +54,20 @@ sudo apt-get install -f
 
 [Ubuntu 16.04安装iBus中文输入法pinyin及问题](https://blog.csdn.net/suifenghahahaha/article/details/78723733)
 
+
+## 2 开发环境
+
+### 2.1 git
+
+
+### 2.2 OpenCV
+
+
+### 2.3 Caffe
+
+
+
+
 ## reference
 
 [大宝日记/ubuntu使用shadowsocks](https://www.sundabao.com/ubuntu%E4%BD%BF%E7%94%A8shadowsocks/)  
