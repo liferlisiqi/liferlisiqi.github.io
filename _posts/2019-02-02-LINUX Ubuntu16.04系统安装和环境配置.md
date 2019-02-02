@@ -16,7 +16,7 @@ tags:
 
 使用U盘进行Ubuntu安装是最常规的操作，也是比较容易搞定的，制作启动盘的时候我们需要一个大于8GB的U盘和Ubuntu镜像文件，制作工具最好使用 Universal USB Installer， 我之前使用其他工具的时候会出现启动盘无法启动的问题。
 
-Ubuntu16.04的镜像文件从官网下载就好： [下载Ubuntu桌面版](http://www.ubuntu.org.cn/download/desktop)，一般我们个人使用的都是64位的桌面版，所以不要下载服务器版本。还有就是对于新手来说，最好下载带有LTS后缀的镜像，因为这代表该镜像是长期维护的，相对来说更为稳定。现在就可以制作启动盘了，下面是官网的教程,分别给出在三个系统下的制作方法，再也不用担心不会制作启动盘了。官网推荐的工具是Rufus，我还没有用过，等有机会尝试以下。
+Ubuntu16.04的镜像文件从官网下载就好： [下载Ubuntu桌面版](http://www.ubuntu.org.cn/download/desktop)，一般我们个人使用的都是64位的桌面版，所以不要下载服务器版本。还有就是对于新手来说，最好下载带有LTS后缀的镜像，因为这代表该镜像是长期维护的，相对来说更为稳定。现在就可以制作启动盘了，下面是官网的教程,分别给出在三个系统下的制作方法，再也不用担心不会制作启动盘了。官网推荐的工具是Rufus，我还没有用过，等有机会尝试一下。
 
 [Create a bootable USB stick on Windows](https://tutorials.ubuntu.com/tutorial/tutorial-create-a-usb-stick-on-windows#9)  
 [Create a bootable USB stick on Ubuntu](https://tutorials.ubuntu.com/tutorial/tutorial-create-a-usb-stick-on-ubuntu#0)  
@@ -35,7 +35,7 @@ Ubuntu16.04的镜像文件从官网下载就好： [下载Ubuntu桌面版](http:
 [Install Ubuntu 16.04 desktop](https://tutorials.ubuntu.com/tutorial/tutorial-install-ubuntu-desktop-1604#0)  
 
 需要注意的几点在这里：
-- 1 既然都用上Ubuntu了，最开始选择语言的时候就选英语吧。如果选择了Chinese，会有一些中文路径，在命令行切换输入法太难受。
+- 1 既然都用上Ubuntu了，最开始选择语言的时候就选英语吧。如果选择了Chinese，会有一些中文路径，在终端切换输入法实在难受。
 - 2 在 `Preparing to install Ubuntu` 界面的两个选项最好不要选，因为安装速度会非常慢，等系统装好后再更新也来的及。
 - 3 在 `installation type` 步骤选择 `Something else` ,感觉大多数人装不上就是卡在这里，也就是对系统进行分区(partition scheme)，下面重点说一下这里的操作。
 
