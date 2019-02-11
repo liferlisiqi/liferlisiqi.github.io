@@ -55,6 +55,11 @@ sudo apt-get install -f
 [Ubuntu 16.04安装iBus中文输入法pinyin及问题](https://blog.csdn.net/suifenghahahaha/article/details/78723733)
 
 
+### 1.6 oh-my-zsh
+因为看上了oh-my-zsh的 agnoster 和 P9K 字体，所以将终端换成了zsh，配置的时候记得先安装powerline字体，不然会出现乱码。  
+[Ubuntu 下 Oh My Zsh 的最佳实践安装及配置](https://segmentfault.com/a/1190000015283092)  
+[Oh My Zsh](https://ohmyz.sh/)  
+
 ## 2 开发环境
 
 ### 2.1 git
