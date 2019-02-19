@@ -20,7 +20,7 @@ AS是Android开发的首选环境，所以这里就介绍针对AS的OpenCV的环
 
 按照前六节操作完成后，我们的环境就配置好了，下面就是如何调用的问题。
 
-## 2 以laplace为例说明通过JNI调用OpenCV
+## 2 以laplace变换为例说明通过JNI调用OpenCV
 
 我们想通过JNI调用OpenCV的话，采用NDK进行编译的话，至少需要这样以下文件：xxx.cpp, xxx.java, Android.mk, Application.mk，其中java和cpp文件的命名必须一致。java文件中是函数的声明，cpp文件是函数的具体实现，下面是我的程序。
 
@@ -40,7 +40,7 @@ public class OpencvHelper {
 }
 ```
 
-在上面的java程序中，我们注意到调用了两个库：opencv_java3 和 OpencvHelper。第一个是上一节拷贝过来的，第二个我们一会儿要自己编译生成。下面是对应的cpp文件，在这里我们实现了laplacian变换算法，实现方式和正常的cpp是一样的，不过需要注意的是函数签名一定要对应好。
+在上面的java程序中，我们注意到调用了两个库：opencv_java3 和 OpencvHelper。第一个是上一节拷贝过来的，第二个我们一会儿要自己编译生成。下面是对应的cpp文件，在这里我们调用了laplacian变换算法检测图像的模糊程度，实现方式和正常的cpp是一样的，不过需要注意的是函数签名一定要对应好。
 
 ```c++
 //OpencvHelper.cpp
