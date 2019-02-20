@@ -29,7 +29,7 @@ python caffe-int8-convert-tool-dev.py --proto=../deploy_new.prototxt --model=../
 记得上面提到的caffe/ssd，这里python调用的一定也是这个。解决方法是在 import caffe 之前加上下面两条语句来配置caffe路径，然后在重新执行上面的命令即可。
 
 ```python
-caffe_root = "path_to_caffe/ssd"
+caffe_root = "path_to_caffe(ssd)"
 sys.path.insert(0, os.path.join(caffe_root, 'python'))
 ```
 
