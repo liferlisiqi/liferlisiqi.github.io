@@ -20,7 +20,13 @@ tags:
 
 得到了新版caffe模型后，我们就可以进行量化了，量化工具也早就有人做好了，开心。在 [BUG1989/caffe-int8-convert-tools](https://github.com/BUG1989/caffe-int8-convert-tools) 项目的 README 中已经介绍如何量化模型的方法，这里说下其中一些需要配置的参数。--mean 和 --norm 可以在 train.prototxt 中找到，分别对应 mean_value 和 scale，量化数据集 --images 我用的是PASCAL 2012数据集，这个就根据个人爱好吧。
 
-一切就绪，只欠终端。将下面这条命令输入终端然后回车， python caffe-int8-convert-tool-dev.py --proto=../deploy_new.prototxt --model=../deploy_new.caffemodel --mean mean_value mean_value mean_value --norm=scale --images=images/ output=deploy_new_int8.table --gpu=0。不出意外的话，肯定不会顺利执行的，我遇到的问题是caffe路径。记得上面提到的caffe/ssd，这里python调用的一定也是这个。解决方法是在 import caffe 之前加上下面两条语句，来配置caffe路径，然后在重新执行上面的命令即可。
+一切就绪，只欠终端。将下面这条命令输入终端然后回车，不出意外的话，肯定不会顺利执行的，我遇到的问题是caffe路径。
+
+```shell
+python caffe-int8-convert-tool-dev.py --proto=../deploy_new.prototxt --model=../deploy_new.caffemodel --mean mean_value mean_value mean_value --norm=scale --images=images/ output=deploy_new_int8.table --gpu=0
+```
+
+记得上面提到的caffe/ssd，这里python调用的一定也是这个。解决方法是在 import caffe 之前加上下面两条语句来配置caffe路径，然后在重新执行上面的命令即可。
 
 ```python
 caffe_root = "path_to_caffe/ssd"
