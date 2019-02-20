@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      MobileNetSSD模型量化及使用NCNN推断         
-date:       2019-02-19   
+date:       2019-02-20   
 author:     lsq    
 header-img: img/post-bg-coffee.jpeg
 catalog: true
