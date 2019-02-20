@@ -6,7 +6,7 @@ author:     lsq
 header-img: img/post-bg-coffee.jpeg
 catalog: true
 tags:
-    -DeepLearning - ANDROID
+    DeepLearning ANDROID
 ---
 
 最近在安卓移动端开发一个可以实时检测车辆行人的app，计算框架采用tencent的ncnn，深度神经网络模型采用MobileNetSSD，这也是现在网上流传比较广的一个例子。受限于移动端计算资源，几乎不可能完成网络模型的实时推断，模型量化的技术也就应运而生。本文将介绍：将一个预训练好的MobileNetSSD(caffe)模型进行量化、量化caffe模型转换成ncnn模型以及MobileNetSSD(ncnn)模型的加载推断。
