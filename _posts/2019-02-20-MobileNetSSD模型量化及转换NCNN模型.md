@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      MobileNetSSD模型量化及使用NCNN推断         
+title:      MobileNetSSD模型量化及转换NCNN模型         
 date:       2019-02-20   
 author:     lsq    
 header-img: img/post-bg-coffee.jpeg
@@ -23,7 +23,7 @@ tags:
 一切就绪，只欠终端。将下面这条命令输入终端然后回车，不出意外的话，肯定不会顺利执行的，我遇到的问题是caffe路径。
 
 ```shell
-python caffe-int8-convert-tool-dev.py --proto=../deploy_new.prototxt --model=../deploy_new.caffemodel --mean mean_value mean_value mean_value --norm=scale --images=images/ output=deploy_new_int8.table --gpu=0
+python caffe-int8-convert-tool-dev.py --proto=../deploy_new.prototxt --model=../deploy_new.caffemodel --mean mean_value mean_value mean_value --norm=scale --images=images/ --output=deploy_new_int8.table --gpu=0
 ```
 
 记得上面提到的caffe/ssd，这里python调用的一定也是这个。解决方法是在 import caffe 之前加上下面两条语句来配置caffe路径，然后在重新执行上面的命令即可。
@@ -36,13 +36,21 @@ sys.path.insert(0, os.path.join(caffe_root, 'python'))
 我使用cpu加上2000多张图片进行的量化，大约花费了不到十分钟的样子，完成后得到了 deploy_new_int8.table ，大小是2.7K，到这里MobileNetSSD模型量化就完成了，鼓掌！！！
 
 
+## 2 caffe量化模型转换ncnn模型
 
+得到了量化的MobileNetSSD模型后，接下来我们将其转换成NCNN模型，以便于集成到Android环境。需要的文件有：deploy_new.prototxt、deploy_new.caffemodel 和 deploy_new_int8.table，均为我们在上文得到的结果。转换工具在 path_to_ncnn/build/tools/caffe/caffe2ncnn, 使用方法如下：  
 
-## 2 caffe模型转换ncnn模型
+```sh
+.../caffe2ncnn deploy_new.prototxt deploy_new.caffemodel MobileNetSSD-int8.param MobileNetSSD-int8.bin 256 deploy_new_int8.table
+```
 
+其实到这一步已经可以加载ncnn模型进行推断了，但是还有一个骚操作就是将模型文件进行加密，加密工具在 path_to_ncnn/build/tools/ncnn2mem ，使用方法如下：  
 
-## 3 MobileNetSSD使用NCNN推断
+```sh
+.../ncnn2mem MobileNetSSD-int8.param MobileNetSSD-int8.bin MobileNetSSD-int8.id.h MobileNetSSD-int8.mem.h
+```
 
+在caffe到ncnn模型转换的过程中，我进行的异常顺利，没有出现任何无法理解的问题。最后在一个安卓设备上进行推断，量化后的模型量化之前快约30%，模型缩小到原来的25%左右，精度肉眼几乎看不出降低，这个效果可以说狠满意了。
 
 
 ## Reference
@@ -51,6 +59,3 @@ sys.path.insert(0, os.path.join(caffe_root, 'python'))
 [Tencent/ncnn/wiki/quantized-int8-inference](https://github.com/Tencent/ncnn/wiki/quantized-int8-inference#caffe-int8-convert-tools)  
 [Tencent/ncnn/wiki/ncnn组件使用指北alexnet](https://github.com/Tencent/ncnn/wiki/ncnn-%E7%BB%84%E4%BB%B6%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8C%97-alexnet)  
 [BUG1989/caffe-int8-convert-tools](https://github.com/BUG1989/caffe-int8-convert-tools)  
-[]()  
-[]()  
-[]()  
